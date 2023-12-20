@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 50px;
+        }
+
+        #container {
+            border: 2px solid black;
+            padding: 25px 40px;
+            box-shadow: 3px 4px 0px 1px #E99F4C;
+            border-radius: 5px;
+            background-color: #EEF5FF;
+            height: 350px;
+        }
+
+
+        input[type="text"],
+        input[type="number"] {
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 2px solid #264143;
+            box-shadow: 3px 4px 0px 1px #E99F4C;
+            padding: 12px 10px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        label {
+            font-weight: bold;
+
+        }
+
+        input[type="submit"] {
+            padding: 15px;
+            margin: 25px 0px;
+            font-size: 15px;
+            background: #65B741;
+            border-radius: 22px;
+            color: white;
+            width: 100%;
+            font-weight: 800;
+            box-shadow: 3px 4px 0px 1px #E99F4C;
+        }
+
+
+
+        input[type="submit"]:hover {
+            background-color: #3973b6;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            text-align: center;
+            font-family: monospace;
+            text-decoration: underline;
+        }
+
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+
+        }
+
+        table td {
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #E99F4C;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+
+        table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #65B741;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        #showDetails {
+            display: none;
+            background: #65B741;
+            border-radius: 22px;
+            color: white;
+            height: 30px;
+            width: 100%;
+            font-weight: 800;
+            box-shadow: 3px 4px 0px 1px #E99F4C;
+        }
+
+        thead {
+            visibility: hidden;
+        }
+
+        tbody {
+            visibility: hidden;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            body {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Details</h1>
+        <form>
+            <label for="name">Name</label><br />
+            <input id="name" type="text" placeholder="Enter Name" required /><br />
+            <label for="name">Age</label><br />
+            <input id="age" type="number" placeholder="Enter Age" required /><br />
+            <input title="Submit the Details" type="submit" />
+        </form>
+        <button title="Click to see the details " id="showDetails">Show Details</button>
+    </div>
+
+    <div id="displaydata">
+        <table>
+            <thead>
+                <tr>
+                    <th>Person</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<script src="index.js"></script>
